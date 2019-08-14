@@ -1,15 +1,20 @@
-var check = "";
+var english = "";
+var nonEng = "";
 var myapp = angular.module('myApp', []);  
 myapp.controller("myController",function($scope){
 	$scope.call1 = function(){
 	
 	if($scope.checkbox.english){
-		check = check + "English";
+		english =" English";
+	}else{
+		english = "";
 	}
 	if($scope.checkbox.non_english){
-		check = check + "Non English";
+		nonEng =" Non English";
+	}else{
+		nonEng = "";
 	}
-	 alert(check + "\n"+"username = " + $scope.username +"\n"+
+	 alert("username = " + $scope.username +"\n"+
 	 		  "Address = " + $scope.address +"\n"+
 	 		  "Email = " + $scope.email +"\n"+
 	 		  "Gender = " + $scope.sex +"\n"+
@@ -17,7 +22,8 @@ myapp.controller("myController",function($scope){
 	 		  "selectedCountry = " + $scope.selectedCountry +"\n"+
 	 		  "username = " + $scope.username +"\n"+
 	 		  "Zip Code = " + $scope.zip +"\n"+
-	 		  "About = " + $scope.desc+"\n"
+	 		  "About = " + $scope.desc+"\n"+
+	 		  "languages "+ english +nonEng
 	 		  );
 	 };
 	 $scope.names = ["India", "USA", "Russia"];
